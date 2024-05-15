@@ -1,0 +1,6 @@
+MCQ,Choices,Correct
+Which of the following best describes Java's WORA principle?,"a: Write Once, Run Anywhere | b: Write Once, Review Always | c: Write Only, Run Anywhere | d: Write Once, Run Automatically",a
+What is the primary reason Java code can run on different platforms without recompilation?,a: Java applications are compiled to native machine code. | b: Java applications are compiled to bytecode that runs on the JVM. | c: Java applications are interpreted at runtime. | d: Java has a unique compiler for each platform.,b
+Who originally developed the Java programming language?,a: Bill Gates | b: James Gosling | c: Linus Torvalds | d: Dennis Ritchie,b
+Which of the following is the default JVM for almost all Linux distributions?,a: Oracle HotSpot | b: OpenJDK JVM | c: IBM J9 | d: Azul Zulu,b
+"As of March 2024, which version of Java is the latest?",a: Java 11 | b: Java 17 | c: Java 21 | d: Java 22,d
