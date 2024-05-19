@@ -2,14 +2,22 @@ import os, PyPDF2,json, traceback
 
 def read_file(file):
     if file.name.endswith('.pdf'):
-        try :
-            pdf_reader=PyPDF2.PdfFileReader(file)
-            text=''
+        try:
+            # Ensure file is opened in binary mode
+            pdf_reader = PyPDF2.PdfReader(file)
+            text = ''
 
             for page in pdf_reader.pages:
-                text += page.extract_text()
+                page_text = page.extract_text()
+                if page_text:  # Check if text extraction was successful
+                    text += page_text
+                else:
+                    raise Exception("Text extraction failed for one or more pages")
+            
+            return text
         except Exception as e:
-            raise Exception("Error reading PDF File")
+            # Print the actual exception for debugging purposes
+            raise Exception(f"Error reading PDF File: {str(e)}")
     
     elif file.name.endswith('.txt'):
         return file.read().decode('utf-8')
